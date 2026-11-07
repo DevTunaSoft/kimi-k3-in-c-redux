@@ -18,16 +18,16 @@ Establish persistent autonomous engineering instructions, an evidence-based hand
 ## Changes in this work branch
 - Add AGENTS.md with standing autonomous engineering rules and safeguards.
 - Add HANDOFF.md as a durable checkpoint.
-- Add a separate CMake smoke-test workflow only if it does not duplicate existing CI coverage.
+- Audited existing CI: CMake smoke tests, Linux/macOS/Windows builds, sanitizer jobs, strict warnings, tokenizer parity, Python lint, and shellcheck already exist. No duplicate workflow added.
 
 ## Test evidence
 - GitHub repository file inspection: completed.
 - Local compilation and runtime tests: NOT RUN (GitHub connector only).
-- CI results for this branch: NOT YET VERIFIED.
+- CI results for this branch: NOT YET VERIFIED. Existing CI workflows trigger on pull requests; this branch has not been merged.
 - Full checkpoint inference: NOT RUN; requires model weights.
 
 ## Risks and follow-up
-1. Review existing workflows in full to identify coverage gaps before adding or changing jobs.
+1. Existing CI was inspected; avoid redundant workflows. Evaluate new coverage only for documented gaps.
 2. Check the current branch's CI run and fix any failure with root-cause analysis.
 3. Audit README branding and attribution separately; do not remove mandatory notices.
 4. Inventory tests, fuzz targets, sanitizers and platform-specific coverage before expanding.
